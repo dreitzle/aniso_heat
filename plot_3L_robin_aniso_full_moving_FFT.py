@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # coding: utf-8
 
 """plot_3L_robin_aniso_full_moving_FFT.py: Generate figures 4 and 5."""

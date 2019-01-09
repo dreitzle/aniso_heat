@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # coding: utf-8
 
 """plot_3L_robin_aniso_full_ext2.py: Generate figure 3."""
