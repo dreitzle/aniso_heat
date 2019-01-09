@@ -85,7 +85,7 @@ calcfn_b = partial(heat_3L_3D_aniso.calc_laplace, med, z=0.0, z0=0.0)
 x = 0.0
 y = 0.0
 
-num_data = pandas.read_csv(filename, delim_whitespace=True, skiprows=5).as_matrix()
+num_data = pandas.read_csv(filename, delim_whitespace=True, skiprows=5).values
 
 t = np.linspace(0, 60, Nt)
 

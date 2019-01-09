@@ -86,7 +86,7 @@ fft_data_x = 1e3*np.linspace(-xFFT/2.0, xFFT/2.0, NFFT)
 
 # Compressed file, decompress first
 datafile = io.StringIO(bz2.BZ2File(filename).read().decode('us-ascii'))
-num_data = pandas.read_csv(datafile, delim_whitespace=True, skiprows=8).as_matrix()
+num_data = pandas.read_csv(datafile, delim_whitespace=True, skiprows=8).values
 
 num_data_x = num_data[:, 0]
 num_data_y = num_data[:, 1]

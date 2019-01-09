@@ -88,7 +88,7 @@ def profile(q, phi):
 
 # Compute solution and plot
 
-num_data = pandas.read_csv(filename, delim_whitespace=True, skiprows=5).as_matrix()
+num_data = pandas.read_csv(filename, delim_whitespace=True, skiprows=5).values
 
 med = heat_3L_3D_aniso(rho1, cp1, k1, rho2, cp2, k2, rho3, cp3, k3,
                        l1, l2, l3, h1, h2)
