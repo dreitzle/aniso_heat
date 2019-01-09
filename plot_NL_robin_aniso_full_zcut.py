@@ -157,9 +157,9 @@ for index, zp in enumerate(z):
 markersize = 3
 fig, ax = plt.subplots()
 
-ax.plot(z*1e3, res1, 'b', label='$t = 3s$')
-ax.plot(z*1e3, res2, 'g', label='$t = 6s$')
-ax.plot(z*1e3, res3, 'r', label='$t = 12s$')
+ax.plot(z*1e3, res1, 'b', label='$t = 3$s')
+ax.plot(z*1e3, res2, 'g', label='$t = 6$s')
+ax.plot(z*1e3, res3, 'r', label='$t = 12$s')
 
 ax.plot(num_data[::5, 0], num_data[::5, 2]-293.15, 'bo', markersize=markersize)
 ax.plot(num_data[::5, 0], num_data[::5, 3]-293.15, 'go', markersize=markersize)
@@ -179,7 +179,7 @@ lgd = plt.legend(loc='upper left', bbox_to_anchor=(1.05, 1.01), borderaxespad=0)
 for legobj in lgd.legendHandles:
     legobj.set_linewidth(2.0)
 
-plt.xlabel('$z / mm$')
-plt.ylabel('$\Delta T / K$')
+plt.xlabel('$z / $mm')
+plt.ylabel('$\Delta T / $K')
 
 plt.show()

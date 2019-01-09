@@ -135,22 +135,22 @@ res_5 = ILT_IFT_brancik(calcfn_m, profile, 0.0, -0.06, t, Ns, Nsp, Nq, Nphi,
 res_6 = ILT_IFT_brancik(calcfn_b, profile, 0.0, 0.0, t, Ns, Nsp, Nq, Nphi,
                         Q=Q, add_laplace=calcfn_b_off, alpha=a)
 
-ax.plot(t, res_1+293.15, 'r', label='$(0,0,0)m$')
+ax.plot(t, res_1+293.15, 'r', label='$(0,0,0)$mm')
 ax.plot(num_data[::20, 0], num_data[::20, 1], 'ro', markersize=markersize)
 
-ax.plot(t, res_2+293.15, 'b', label='$(0.06,0,0)m$')
+ax.plot(t, res_2+293.15, 'b', label='$(60,0,0)$mm')
 ax.plot(num_data[::20, 0], num_data[::20, 2], 'bo', markersize=markersize)
 
-ax.plot(t, res_3+293.15, 'k', label='$(0,0,0.0305)m$')
+ax.plot(t, res_3+293.15, 'k', label='$(0,0,30.5)$mm')
 ax.plot(num_data[::20, 0], num_data[::20, 11], 'ko', markersize=markersize)
 
-ax.plot(t, res_4+293.15, 'c', label='$(0,0.06,0.0305)m$')
+ax.plot(t, res_4+293.15, 'c', label='$(0,60,30.5)$mm')
 ax.plot(num_data[::20, 0], num_data[::20, 13], 'co', markersize=markersize)
 
-ax.plot(t, res_5+293.15, 'g', label='$(0,-0.06,0.0305)m$')
+ax.plot(t, res_5+293.15, 'g', label='$(0,-60,30.5)$mm')
 ax.plot(num_data[::20, 0], num_data[::20, 15], 'go', markersize=markersize)
 
-ax.plot(t, res_6+293.15, 'y', label='$(0,0,0.06)m$')
+ax.plot(t, res_6+293.15, 'y', label='$(0,0,60)$mm')
 ax.plot(num_data[::20, 0], num_data[::20, 6], 'yo', markersize=markersize)
 
 plt.xlim(0.0, 35.0)
@@ -162,8 +162,8 @@ lgd = plt.legend(loc='upper left', bbox_to_anchor=(1.05, 1.01), borderaxespad=0)
 for legobj in lgd.legendHandles:
     legobj.set_linewidth(2.0)
 
-plt.xlabel('$t / s$')
-plt.ylabel('$T / K$')
+plt.xlabel('$t / $s')
+plt.ylabel('$T / $K')
 
 plt.subplots_adjust(right=0.65)
 

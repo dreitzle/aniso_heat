@@ -95,7 +95,7 @@ stop = time.perf_counter()
 
 print("time: %f" % (stop-start))
 
-ax.plot(t, res+293.15, 'c', label='$(0,0,0)m$')
+ax.plot(t, res+293.15, 'c', label='$(0,0,0)$mm')
 ax.plot(num_data[::20, 0], num_data[::20, 1], 'co', markersize=markersize)
 
 ##
@@ -107,7 +107,7 @@ y = 0.0
 
 res = Q*ILT_IFT_brancik(calcfn_b, profile, x, y, t, Ns, Ns2, Nq, Nphi)
 
-ax.plot(t, res+293.15, 'r', label='$(0,0,0.06)m$')
+ax.plot(t, res+293.15, 'r', label='$(0,0,60)$mm')
 ax.plot(num_data[::20, 0], num_data[::20, 11], 'ro', markersize=markersize)
 
 
@@ -120,7 +120,7 @@ y = 0.0
 
 res = Q*ILT_IFT_brancik(calcfn_b, profile, x, y, t, Ns, Ns2, Nq, Nphi)
 
-ax.plot(t, res+293.15, 'k', label='$(0,0,0.0305)m$')
+ax.plot(t, res+293.15, 'k', label='$(0,0,30.5)$mm')
 ax.plot(num_data[::20, 0], num_data[::20, 6], 'ko', markersize=markersize)
 
 ###
@@ -132,7 +132,7 @@ y = 0.06
 
 res = Q*ILT_IFT_brancik(calcfn_b, profile, x, y, t, Ns, Ns2, Nq, Nphi)
 
-ax.plot(t, res+293.15, 'm', label='$(0.0,0.06,0.0305)m$')
+ax.plot(t, res+293.15, 'm', label='$(0,60,30.5)$mm')
 ax.plot(num_data[::20, 0], num_data[::20, 8], 'mo', markersize=markersize)
 
 ###
@@ -144,7 +144,7 @@ y = 0.0
 
 res = Q*ILT_IFT_brancik(calcfn_b, profile, x, y, t, Ns, Ns2, Nq, Nphi)
 
-ax.plot(t, res+293.15, 'b', label='$(0.06,0.0,0.0305)m$')
+ax.plot(t, res+293.15, 'b', label='$(60,0,30.5)$mm')
 ax.plot(num_data[::20, 0], num_data[::20, 7], 'bo', markersize=markersize)
 
 ###
@@ -155,8 +155,8 @@ lgd = plt.legend(loc='upper left', bbox_to_anchor=(1.05, 1.01), borderaxespad=0)
 for legobj in lgd.legendHandles:
     legobj.set_linewidth(2.0)
 
-plt.xlabel('$t / s$')
-plt.ylabel('$T / K$')
+plt.xlabel('$t / $s')
+plt.ylabel('$T / $K')
 
 plt.subplots_adjust(right=0.65)
 
